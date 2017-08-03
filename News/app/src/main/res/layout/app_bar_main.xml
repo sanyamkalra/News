@@ -4,7 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <include
+        layout="@layout/content_main"
+        android:id="@+id/include" />
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
         android:layout_height="wrap_content"
@@ -24,37 +26,43 @@
             app:tabSelectedTextColor="@color/colorAccent">
 
             <android.support.design.widget.TabItem
+                android:id="@+id/tab1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Favourites"
-                />
+                android:text="Favourites" />
 
             <android.support.design.widget.TabItem
+                android:id="@+id/tab2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="World" />
 
             <android.support.design.widget.TabItem
+                android:id="@+id/tab3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="National" />
 
             <android.support.design.widget.TabItem
+                android:id="@+id/tab4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Business" />
 
             <android.support.design.widget.TabItem
+                android:id="@+id/tab5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sports" />
 
             <android.support.design.widget.TabItem
+                android:id="@+id/tab6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Technology" />
 
             <android.support.design.widget.TabItem
+                android:id="@+id/tab7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Entertainment" />

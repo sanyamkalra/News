@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -25,8 +29,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -39,12 +41,34 @@ public class MainActivity extends AppCompatActivity
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                
+                android.app.FragmentManager manager=getFragmentManager();
+                switch (tab.getPosition()) {
+                    case 0:
+                        android.app.FragmentTransaction transaction = manager.beginTransaction();
+                        transaction.replace(R.id.framelayout, new fragment_1());
+                        //transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                        transaction.commit();
+                        break;
+                    case 1:
+                        android.app.FragmentTransaction transaction2 = manager.beginTransaction();
+                        transaction2.replace(R.id.framelayout, new fragment_2());
+                        //transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                        transaction2.commit();
+                        break;
+                    case R.id.tab3:
+                    case R.id.tab4:
+                    case R.id.tab5:
+                    case R.id.tab6:
+                    case R.id.tab7:
+                }
 
-            }
+
+        }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
+
+
 
             }
 
@@ -52,9 +76,12 @@ public class MainActivity extends AppCompatActivity
             public void onTabReselected(TabLayout.Tab tab) {
 
             }
-        });
 
-    }
+            ;
+
+    })
+    ;}
+
 
     @Override
     public void onBackPressed() {
