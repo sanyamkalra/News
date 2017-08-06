@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "549501331424",
+    "firebase_url": "https://news-d2a1b.firebaseio.com",
+    "project_id": "news-d2a1b",
+    "storage_bucket": "news-d2a1b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:549501331424:android:9ce11d008b8fb71f",
+        "android_client_info": {
+          "package_name": "com.sanyam.news"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "549501331424-kqi273r6p67doi64htnsmunh5vhtigbb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANk-L5CkBSKNXIq-WIkooWyCaUyyxpdvo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
