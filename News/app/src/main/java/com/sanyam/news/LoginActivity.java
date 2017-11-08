@@ -6,19 +6,19 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 /**
@@ -31,7 +31,6 @@ public class LoginActivity extends Activity {
     private FirebaseAuth auth;
     private ProgressBar progressBar;
     private Button btnSignup, btnLogin, btnReset;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,10 +64,9 @@ public class LoginActivity extends Activity {
             public void onClick(View v) {
                 String email = inputEmail.getText().toString();
                 final String password = inputPassword.getText().toString();
-
-                if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(getApplicationContext(), "Enter email address", Toast.LENGTH_SHORT).show();
-                    return;
+                if(TextUtils.isEmpty(email)){
+                        Toast.makeText(getApplicationContext(), "Enter email address", Toast.LENGTH_SHORT).show();
+                        return;
                 }
 
                 if (TextUtils.isEmpty(password)) {
@@ -87,7 +85,7 @@ public class LoginActivity extends Activity {
                                     if (password.length() < 6) {
                                         inputPassword.setError(getString(R.string.minimum_password));
                                     } else {
-                                        Toast.makeText(LoginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
+                                        Toast.makeText(LoginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_SHORT).show();
                                     }
                                 } else {
                                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -98,6 +96,7 @@ public class LoginActivity extends Activity {
                         });
             }
         });
+
         /**
          * Can be used to login password is submitted
         inputPassword.setOnEditorActionListener(new TextView.OnEditorActionListener() {

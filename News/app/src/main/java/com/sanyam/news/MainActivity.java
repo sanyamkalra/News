@@ -73,10 +73,35 @@ public class MainActivity extends AppCompatActivity
                         transaction2.commit();
                         break;
                     case R.id.tab3:
+                        android.app.FragmentTransaction transaction3 = manager.beginTransaction();
+                        transaction3.replace(R.id.framelayout, new fragment_3());
+                        //transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                        transaction3.commit();
+                        break;
                     case R.id.tab4:
+                        android.app.FragmentTransaction transaction4 = manager.beginTransaction();
+                        transaction4.replace(R.id.framelayout, new fragment_4());
+                        //transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                        transaction4.commit();
+                        break;
                     case R.id.tab5:
+                        android.app.FragmentTransaction transaction5 = manager.beginTransaction();
+                        transaction5.replace(R.id.framelayout, new fragment_5());
+                        //transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                        transaction5.commit();
+                        break;
                     case R.id.tab6:
+                        android.app.FragmentTransaction transaction6 = manager.beginTransaction();
+                        transaction6.replace(R.id.framelayout, new fragment_6());
+                        //transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                        transaction6.commit();
+                        break;
                     case R.id.tab7:
+                        android.app.FragmentTransaction transaction7 = manager.beginTransaction();
+                        transaction7.replace(R.id.framelayout, new fragment_7());
+                        //transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                        transaction7.commit();
+                        break;
                 }
 
 

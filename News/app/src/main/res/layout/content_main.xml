@@ -11,9 +11,10 @@
 
     <FrameLayout
         android:id="@+id/framelayout"
-        android:layout_width="344dp"
+        android:layout_width="363dp"
         android:layout_height="503dp"
-        tools:layout_editor_absoluteX="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="8dp">
 
     </FrameLayout>
